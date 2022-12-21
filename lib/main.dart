@@ -40,11 +40,12 @@ class CustomDesgin extends CustomClipper<Path>{
   Path getClip(Size size) {
 
     Path path=Path();
-    // path ,lineTo is used to create the stright line from x to y
-    path.lineTo(0, 0);
-    path.lineTo(0,size.height);
-    path.lineTo(size.height, size.width);
-    path.lineTo(size.width, 0);
+    // here we are moving our point to certain place
+    // by doing that we will assign the new value to its pointg
+   path.moveTo(size.width/2, 0);
+   path.lineTo(0, size.height);
+   path.lineTo(size.height, size.width);
+   path.close();
 
     return path;
 
